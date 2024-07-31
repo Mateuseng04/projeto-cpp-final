@@ -1,11 +1,9 @@
 #include <iostream>
 #include "sculptor.h" // Inclua o arquivo da classe Sculptor
-#include "Sculptor.cpp" // Inclua o arquivo da classe Sculptor
 
 int main(void) {
-  int joao;
-    Sculptor joao(200, 200, 200);
 
+    Sculptor joao(200, 200, 200);
     joao.setColor(0, 0, 1, 1);
     joao.putVoxel(10, 10, 10);
     joao.putBox(50, 51, 40, 41, 40, 41); // Os valores de x1, y1, z1 devem ser maiores que x0, y0, z0
@@ -15,7 +13,7 @@ int main(void) {
     joao.putEllipsoid(50, 50, 50, 20, 30, 40); // Corrigido os valores dos raios
     joao.cutEllipsoid(10, 10, 10, 10, 10, 10);
     
-    joao.writeOFF;
+    joao.writeOFF("teste.off");
     
     return 0;
 }
